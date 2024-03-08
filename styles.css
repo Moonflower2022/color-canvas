@@ -1,0 +1,29 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff; /* Optional: Background color */
+} 
+
+.flex-grid .column {
+    flex: 1;
+}
+
+.flex-grid {
+    display: flex;
+    align-items: center; /* Centers vertically */
+}
+
+.column {
+    width: 100%;
+    text-align: center;
+    display: block;
+}
+
+.title-container {
+    height: 300px
+}
+
+.title-text {
+    font-size: 100px;
+    font-family: 'Trebuchet MS', sans-serif;
+}
