@@ -30,7 +30,7 @@ html, body {
 
 .color-square {
     margin-bottom: 20px;
-    padding: 10px;
+    padding: 10px 20px 10px;
     height: auto;
     width: auto;
     border-radius: 20px;
