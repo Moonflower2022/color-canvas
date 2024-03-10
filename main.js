@@ -25,11 +25,11 @@ function arrayToHexString(arr){
 */
 
 
-let background = localStorage.getItem("background") ? JSON.parse(localStorage.getItem("background")) : '#FFFFFF'; // white
-let text = localStorage.getItem("text") ? JSON.parse(localStorage.getItem("text")) : '#000000'; // black
-let primary = localStorage.getItem("primary") ? JSON.parse(localStorage.getItem("primary")) : '#FFFFFF'; // white
-let secondary = localStorage.getItem("secondary") ? JSON.parse(localStorage.getItem("secondary")) : '#C8C8C8'; // light gray
-let accent = localStorage.getItem("accent") ? JSON.parse(localStorage.getItem("accent")) : '#646464'; // dark gray
+let background = localStorage.getItem("background") ? JSON.parse(localStorage.getItem("background")) : "#eadcdc"; // gray
+let text = localStorage.getItem("text") ? JSON.parse(localStorage.getItem("text")) : "#1f0000"; // black
+let primary = localStorage.getItem("primary") ? JSON.parse(localStorage.getItem("primary")) : '#ffadad'; // light pink
+let secondary = localStorage.getItem("secondary") ? JSON.parse(localStorage.getItem("secondary")) : "#ff7094"; // pink
+let accent = localStorage.getItem("accent") ? JSON.parse(localStorage.getItem("accent")) : "#ff5768"; // pink orange ish
 
 
 const root = document.documentElement
