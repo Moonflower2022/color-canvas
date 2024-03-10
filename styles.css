@@ -1,4 +1,5 @@
-body {
+html, body {
+    height: 100%;
     margin: 0;
     padding: 0;
     background-color: #ffffff; /* Optional: Background color */
@@ -13,17 +14,103 @@ body {
     align-items: center; /* Centers vertically */
 }
 
+@media screen and (max-width: 730px) {
+    .flex-grid {
+        display: block;
+    }
+ }
+
 .column {
-    width: 100%;
-    text-align: center;
+    margin: 20px 30px 20px;
+    padding: 20px 30px 20px;
+    border-radius: 20px;
+    width: auto;
     display: block;
 }
 
-.title-container {
-    height: 300px
+.color-square {
+    margin-bottom: 20px;
+    padding: 10px;
+    height: auto;
+    width: auto;
+    border-radius: 20px;
+}
+
+@media screen and (max-width: 600px) {
+    .column {
+        margin: 10px;
+        padding: 10px;
+    }
+ }
+
+.gradient {
+    background: linear-gradient(to right, var(--primary), var(--accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .title-text {
+    margin: 45px 0 30px;
     font-size: 100px;
+    text-align: center;
     font-family: 'Trebuchet MS', sans-serif;
+    transition: font-size 0.5s;
+    transition: margin 0.5s;
+}
+
+@media screen and (max-width: 600px) {
+    .title-text {
+        font-size: 70px;
+        margin: 0;
+    }
+ }
+
+.title2-text {
+    margin: 20px 0 20px;
+    font-size: 50px;
+    text-align: center;
+    font-family: Tahoma, sans-serif;
+}
+
+.text {
+    margin: 20px 0 20px;
+    font-family: Geneva, Verdana, sans-serif;
+}
+
+.background-bg {
+    background-color: var(--background);
+}
+
+.text-bg {
+    background-color: var(--text);
+}
+.primary-bg {
+    background-color: var(--primary);
+}
+
+.secondary-bg {
+    background-color: var(--secondary);
+}
+.accent-bg {
+    background-color: var(--accent);
+}
+
+.background-color {
+    color: var(--background);
+}
+
+.text-color {
+    color: var(--text);
+}
+
+.primary-color {
+    color: var(--primary);
+}
+
+.secondary-color {
+    color: var(--secondary);
+}
+
+.accent-color {
+    color: var(--accent);
 }

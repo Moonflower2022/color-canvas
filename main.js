@@ -1,19 +1,8 @@
-/*
-
-Convert a number to a hexadecimal string with:
-
-hexString = yourNumber.toString(16);
-
-And reverse the process with:
-
-yourNumber = parseInt(hexString, 16);
-
-*/
-
-
-function inRange(num, min, max){
+function inRange(num, min, max) {
     return num <= max && num >= min
 }
+
+/*
 
 function arrayToHexString(arr){
     if (!Array.isArray(arr)){
@@ -33,9 +22,57 @@ function arrayToHexString(arr){
     return "#" + r + g + b
 }
 
+*/
 
-let backgroundColor = [1, 2, 3]
-let titleColor = [255, 255, 255]
 
-console.log(arrayToHexString(backgroundColor))
-console.log(arrayToHexString(titleColor))
+let background = localStorage.getItem("background") ? JSON.parse(localStorage.getItem("background")) : '#FFFFFF'; // white
+let text = localStorage.getItem("text") ? JSON.parse(localStorage.getItem("text")) : '#000000'; // black
+let primary = localStorage.getItem("primary") ? JSON.parse(localStorage.getItem("primary")) : '#FFFFFF'; // white
+let secondary = localStorage.getItem("secondary") ? JSON.parse(localStorage.getItem("secondary")) : '#C8C8C8'; // light gray
+let accent = localStorage.getItem("accent") ? JSON.parse(localStorage.getItem("accent")) : '#646464'; // dark gray
+
+
+const root = document.documentElement
+
+root.style.setProperty('--background', background);
+root.style.setProperty('--text', text);
+root.style.setProperty('--primary', primary);
+root.style.setProperty('--secondary', secondary);
+root.style.setProperty('--accent', accent);
+
+const backgroundPicker = document.getElementById('background-color-picker');
+const textPicker = document.getElementById('text-color-picker');
+const primaryPicker = document.getElementById('primary-color-picker');
+const secondaryPicker = document.getElementById('secondary-color-picker');
+const accentPicker = document.getElementById('accent-color-picker');
+
+backgroundPicker.value = background;
+textPicker.value = text;
+primaryPicker.value = primary;
+secondaryPicker.value = secondary;
+accentPicker.value = accent;
+
+backgroundPicker.addEventListener('input', function () {
+    root.style.setProperty('--background', backgroundPicker.value);
+    localStorage.setItem("background", JSON.stringify(backgroundPicker.value));
+});
+
+textPicker.addEventListener('input', function () {
+    root.style.setProperty('--text', textPicker.value);
+    localStorage.setItem("text", JSON.stringify(textPicker.value));
+});
+
+primaryPicker.addEventListener('input', function () {
+    root.style.setProperty('--primary', primaryPicker.value);
+    localStorage.setItem("primary", JSON.stringify(primaryPicker.value));
+});
+
+secondaryPicker.addEventListener('input', function () {
+    root.style.setProperty('--secondary', secondaryPicker.value);
+    localStorage.setItem("secondary", JSON.stringify(secondaryPicker.value));
+});
+
+accentPicker.addEventListener('input', function () {
+    root.style.setProperty('--accent', accentPicker.value);
+    localStorage.setItem("accent", JSON.stringify(accentPicker.value));
+});

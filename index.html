@@ -3,33 +3,54 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Colors</title>
+    <title>Color Canvas</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="main.js"></script>
   </head>
   <body>
-    <div class="flex-grid title-container" style="background-color: #90a0f0;">
+    <div class="flex-grid background-bg">
         <div class="column">
-            <div class="title-text" id="title-text">Welcome to My Website</div>
+            <div class="title-text text-color">Visualize Your <span class="gradient">Colors</span>!</div>
+            <div class="flex-grid">
+                <div class="column secondary-bg">
+                    <div class="title2-text text-color">I love icecream</div>
+                    <div class="text text-color"> Pellentesque mauris velit, hendrerit ut condimentum sit amet, mollis ut ipsum. Pellentesque non sapien quis nulla consequat venenatis in malesuada eros. <br> <br> Morbi non sodales sem. Nullam quis nunc augue. In id risus elementum, scelerisque nibh a, auctor risus. Pellentesque ut purus vel ligula iaculis fringilla ac in est.</div>
+                </div>
+                <div class="column">
+                    <div class="color-square primary-bg">
+                        <div class="title2-text text-color">Simple</div>
+                        <div class="text text-color"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dictum aliquet elementum. Quisque id varius eros. </div>
+                    </div>
+                    <div class="color-square accent-bg">
+                        <div class="title2-text text-color">Easy</div>
+                        <div class="text text-color"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dictum aliquet elementum. Quisque id varius eros. </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <div class="flex-grid colors-container">
         <div class="column">
-            Title
-            <input type="color" id="title">
-        </div>
-        <div class="column">
-            Title2
-            <input type="color" id="title2">
+            Background
+            <input type="color" id="background-color-picker">
         </div>
         <div class="column">
             Text
-            <input type="color" id="text">
+            <input type="color" id="text-color-picker">
         </div>
         <div class="column">
-            Background
-            <input type="color" id="background">
+            Primary
+            <input type="color" id="primary-color-picker">
+        </div>
+        <div class="column">
+            Secondary
+            <input type="color" id="secondary-color-picker">
+        </div>
+        <div class="column">
+            Accent
+            <input type="color" id="accent-color-picker">
         </div>
     </div>
+    <script src="main.js"></script>
   </body>
 </html>
